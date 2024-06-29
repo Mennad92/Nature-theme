@@ -1,0 +1,179 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('image/Lac.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 80px;
+    transition: background-image 0.5s ease, color 0.5s ease;
+}
+
+body.dark-theme {
+    background-image: url('image/nuit.png');
+    color: #ffffff;
+}
+header {
+    width: 100%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background: linear-gradient(90deg, rgba(109, 76, 0, 0.5), rgba(0, 104, 16, 0.5)); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+}
+body.dark-theme .navbar{
+    
+    background: linear-gradient(90deg, rgba(122, 59, 0, 0.5), rgba(14, 4, 105, 0.849)); 
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+
+.theme-toggle {
+    font-size: 16px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:0.5s ease, color 0.5s ease;
+}
+
+.theme-toggle:hover {
+    background-color: #000000;
+}
+body.dark-theme .theme-toggle{
+    background-color: #000000;
+}
+body.dark-theme .theme-toggle:hover{
+    background-color: #ffffff;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+}
+
+.center {
+    margin-bottom: 15px;
+}
+
+.text {
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(82, 51, 0);
+    display: block;
+    margin-bottom: 10px;
+}
+body.dark-theme .text {
+    color: #a88100;
+}
+
+.input-field {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border: 3px solid #004401;
+    border-radius: 5px; 
+}
+
+.submit-button {
+    font-size: 30px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    border: none; 
+    border-radius: 5px; 
+    background-color: #044700; 
+    color: white;     
+    cursor: pointer;
+    transition: 0.5s ease, color 0.5s ease;
+}
+
+.submit-button:hover {
+    background-color: #6d5e00; 
+}
+
+.error {
+    background-color:  rgba(0, 86, 7, 0.8);
+    color: rgb(255, 179, 0);
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(165, 126, 0, 0.3);
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    bottom: 0;
+}
+body.dark-theme footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #a88100;
+}
+@media (max-width: 768px) {
+    .text {
+        font-size: 28px;
+    }
+
+    .input-field {
+        font-size: 24px;
+        padding: 8px;
+    }
+
+    .submit-button {
+        font-size: 24px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text {
+        font-size: 24px;
+    }
+
+    .input-field {
+        font-size: 20px;
+        padding: 6px;
+    }
+
+    .submit-button {
+        font-size: 20px;
+        padding: 6px 12px;
+    }
+}

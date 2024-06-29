@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <button id="theme-toggle" class="theme-toggle"></button><img src="image/logo.png" alt="Logo" class="logo">
+            </button></div>
+        </nav>
+    </header>
+    <form id="subscribe-form" class="center">
+        <div class="center">
+            <label for="name" class="text">Adresse mail :</label>
+            <input type="text" name="name" id="name" class="input-field" required />
+        </div>
+        <div class="center">
+            <label for="email" class="text">Mot de passe :</label>
+            <input type="password" name="password" id="password" class="input-field" required />
+            <div id="password-error" class="error"></div>
+        </div>
+        <div class="center">
+            <input type="submit" value="Connexion" class="submit-button" />
+        </div>
+    </form>
+    <footer>
+        Copyright © 2024
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
